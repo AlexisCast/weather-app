@@ -15,5 +15,5 @@ Asynchronous, web servers and Accessing API from Browser.
 node app.js "New York"
 ```
 ```bash
-node app.js read "Los Angeles"
+node app.js "Los Angeles"
 ```
