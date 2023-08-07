@@ -8,15 +8,15 @@ const address = process.argv[2];
 if (!address) {
 	console.log("No address was provided");
 } else {
-	geocode(address, (error, data) => {
+	geocode(address, (error, { latitud, longitud, location }) => {
 		if (error) {
 			return console.log("Error", error);
 		}
-		forecast(data.latitud, data.longitud, (error, forecatData) => {
+		forecast(latitud, longitud, (error, forecatData) => {
 			if (error) {
 				return console.log("Error", error);
 			}
-			console.log(data.location);
+			console.log(location);
 			console.log(forecatData);
 		});
 	});
